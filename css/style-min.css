@@ -1,0 +1,170 @@
+body{
+    font-family: "poppins-medium",Arial, Helvetica, sans-serif;
+}
+.map,
+.map iframe {
+    height: 100%;
+    width: 100%;
+}
+
+/* Optional: Makes the sample page fill the window. */
+html,
+body,
+.mapContainer {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+a.iconItem {
+    color: #fff;
+    font-weight: bold;
+    background-color: #ed414e;
+    padding: 14px 15px;
+    border-radius: 35%;
+    transform: rotate(-2deg);
+    transition: all .35s ease-in-out;
+}
+
+a.iconItem:hover {
+    background-color: #f55865;
+    /* transform: rotate(-360deg);*/
+}
+
+#map iframe div[jstcache] {
+    display: none !important;
+}
+
+.mapOptions {
+    width: 100%;
+    display: block;
+}
+
+.mapOptions .mapMenu {
+    position: absolute;
+    top: 30px;
+    width: 100%;
+    text-align: center;
+}
+
+.mapSideMenu {
+    background-color: #f2f2f2;
+    border-right: 1px solid #d5d5d5;
+    padding: 10px 13px;
+    height: 100%;
+}
+
+.mapSideMenu .mapSideWrapper {
+    background-color: #fff;
+    height: 100%;
+    box-shadow: 1px 0px 4px 1px #e5e5e5;
+}
+
+.menuNav.ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+ul.menuNav li {
+    display: inline-block;
+    margin: .5rem 1rem;
+}
+
+.menuNav .searchMap {
+    width: 30%;
+}
+
+.menuNav .searchMap .form-group {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.menuNav .searchMap .form-group input {
+    border-radius: 20px;
+    height: 46px;
+    box-shadow: 0px 1px 2px 0px #ced4da;
+}
+
+.menuNav .searchMap .form-group a {
+    position: absolute;
+    right: 0px;
+    width: 45px;
+    height: 45px;
+    line-height: 20px;
+}
+
+.menuNav .setAddress a {
+    color: #ed414e;
+    background-color: #fff;
+    padding: 10px 30px 12px 15px;
+    border-radius: 20px;
+    font-weight: 300;
+    border: 1px solid #ced4da;
+    box-shadow: 0px 1px 2px 0px #ced4da;
+}
+
+.menuNav .setAddress a img {
+    width: 15%;
+}
+
+
+
+/************************offCanvas - left side bar*************************/
+
+body.offcanvas-active {
+    overflow: hidden;
+}
+
+.offcanvas-header {
+    position: absolute;
+    right: -40px;
+    top: 100px;
+    color: #e5e5e5 !important;
+    bordeR: none;
+
+}
+
+.offcanvas-header button {
+    color: #555;
+    border: 1px solid #cfcfcf;
+    width: 40px;
+    height: 40px;
+    line-height: 30px;
+    outline: none !important;
+}
+
+.screen-overlay.showCanvas {
+    transition: opacity .5s ease, width 0s;
+    opacity: 1;
+    width: 100%;
+    visibility: visible;
+}
+
+.mobile-offcanvas {
+    visibility: hidden;
+    transform: translateX(-100%);
+    border-radius: 0;
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: 1200;
+    width: 24%;
+    transition: visibility .35s ease-in-out, transform .35s ease-in-out;
+}
+
+.mobile-offcanvas.showCanvas {
+    visibility: visible;
+    transform: translateX(0);
+}
+
+
+@media all and (max-width:992px) {
+
+    .offcanvas-header {
+        display: block;
+    }
+
+}
