@@ -1,11 +1,12 @@
-@font-face{
+@font-face {
     font-family: "robotoMed";
-    src:url(../webfonts/Roboto-Medium.ttf) ;
+    src: url(../webfonts/Roboto-Medium.ttf);
 }
 
-body{
-    font-family: "robotoMed",Arial, Helvetica, sans-serif;
+body {
+    font-family: "robotoMed", Arial, Helvetica, sans-serif;
 }
+
 .map,
 .map iframe {
     height: 100%;
@@ -24,8 +25,9 @@ body,
 a.iconItem {
     color: #fff;
     font-weight: bold;
+    display: inline-block;
     background-color: #ed414e;
-    padding: 14px 15px;
+    padding: 10px 15px;
     border-radius: 35%;
     transform: rotate(-2deg);
     transition: all .35s ease-in-out;
@@ -34,10 +36,6 @@ a.iconItem {
 a.iconItem:hover {
     background-color: #f55865;
     /* transform: rotate(-360deg);*/
-}
-
-#map iframe div[jstcache] {
-    display: none !important;
 }
 
 .mapOptions {
@@ -65,27 +63,27 @@ a.iconItem:hover {
     box-shadow: 1px 0px 4px 1px #e5e5e5;
 }
 
-.menuNav.ul {
+ul.menuNav {
     list-style-type: none;
     text-align: center;
 }
 
 ul.menuNav li {
     display: inline-block;
-    margin: .5rem 1rem;
+    margin: .5rem;
 }
 
-.menuNav .searchMap {
+ul.menuNav .searchMap {
     width: 30%;
 }
 
-.menuNav .searchMap .form-group {
+ul.menuNav .searchMap .form-group {
     display: flex;
     justify-content: center;
     position: relative;
 }
 
-.menuNav .searchMap .form-group input {
+ul.menuNav .searchMap .form-group input {
     border-radius: 20px;
     height: 46px;
     box-shadow: 0px 1px 2px 0px #ced4da;
@@ -94,9 +92,7 @@ ul.menuNav li {
 .menuNav .searchMap .form-group a {
     position: absolute;
     right: 0px;
-    width: 45px;
-    height: 45px;
-    line-height: 20px;
+    top:1px;
 }
 
 .menuNav .setAddress a {
