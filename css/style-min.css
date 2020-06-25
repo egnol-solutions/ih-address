@@ -85,7 +85,7 @@ ul.menuNav .searchMap .form-group {
 
 ul.menuNav .searchMap .form-group input {
     border-radius: 20px;
-    height: 46px;
+    height: 40px;
     box-shadow: 0px 1px 2px 0px #ced4da;
 }
 
@@ -161,7 +161,16 @@ body.offcanvas-active {
     transform: translateX(0);
 }
 
+/************************form*************************/
 
+form{font-size:.8rem;color: #cfcfcf; font-weight: 200; font-family: "roboto", Arial, Helvetica, sans-serif}
+.custom-select{height: calc(.75em + .75rem + 2px);font-size:.7rem;padding:.175rem}
+.form-group{margin-bottom:.6rem;}
+.form-control{height: calc(.75em + .75rem + 2px);padding: .175rem;}
+form input::placeholder{font-size:.8rem;}
+.btn{border-radius:3rem;width:125px;font-size:.7rem;padding: .175rem .75rem;}
+.btn-color{background-color: #ed414e;color:#fff;}
+.btn-color:hover{background-color: #333;color:#fff;}
 @media all and (max-width:992px) {
 
     .offcanvas-header {
