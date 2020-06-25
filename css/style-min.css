@@ -1,5 +1,10 @@
+@font-face{
+    font-family: "robotoMed";
+    src:url(../webfonts/Roboto-Medium.ttf) ;
+}
+
 body{
-    font-family: "poppins-medium",Arial, Helvetica, sans-serif;
+    font-family: "robotoMed",Arial, Helvetica, sans-serif;
 }
 .map,
 .map iframe {
