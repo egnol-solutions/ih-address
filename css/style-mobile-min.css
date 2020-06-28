@@ -1,0 +1,32 @@
+
+.offcanvas-header{
+    top: -38px;
+    left: 0px;
+    right: auto;
+    width: 100%;
+    z-index: 10;
+}
+.offcanvas-header button{
+  width: 100%;
+  background: #ed414e;
+  color:#eee;
+}
+.offcanvas-header button:hover{
+  background: #f55865;
+}
+.mapSideMenu{
+  padding:0;
+}
+
+
+@media screen and (max-width:991px) {
+  .mobile-offcanvas{
+    width:100%;
+    transform: translateY(100%);
+    top:auto;
+    bottom:0;
+  }
+  .mobile-offcanvas.showCanvas{
+    transform: translateY(5%);
+  }
+}

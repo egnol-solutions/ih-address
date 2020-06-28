@@ -11,7 +11,7 @@
   <meta property="og:image" content="images/favicon.png">
   <meta name="robots" content="index,follow,max-snippet:100">
   <meta name="googlebot" content="index,follow,max-snippet:100">
-  <link rel="icon" type="image/png"  href="images/favicon.png">
+  <link rel="icon" type="image/png" href="images/favicon.png">
   <title>IH Address</title>
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/all.min.css">
@@ -33,21 +33,22 @@
     <!---------------------map options ----------------------->
     <nav class="mapOptions">
       <div class="mapMenu">
-        <form class="form">
+        <form class="formSearch">
           <ul class='menuNav'>
-            <li><a href="#" class="iconItem"><i class="fas fa-satellite-dish"></i></a></li>
-            <li><a href="#" class="iconItem"><i class="fas fa-location-arrow"></i></a></li>
+            <li><a href="#" class="iconItem"><img src="images/ih-satellite.png" alt ="satellite view"></a></li>
+            <li><a href="#" class="iconItem"><img src="images/ih-crosshairs.png" alt="track ur location" ></a></li>
             <li class="searchMap">
               <div class='form-group'>
-                <input type="text" class="form-control">
-                <a href="#" class="iconItem"><i class="fas fa-search"></i></a>
+                <input type="text" id="searchInput" class="form-control searchInput">
+                <a href="#" class="iconItem search"><img  src="images/ih-search.png" alt="search"></a>
+                <a href="#" class="iconItem cancel" style="display: none;"><img  src="images/ih-cancel.png" alt="search"></a>
               </div>
             </li>
             <li class="setAddress" data-trigger="#navbar_main">
               <a href="#"><img alt="logo" src="images/ih-logo.png">
                 Set your IH address </a>
             </li>
-            <li><a href="" class="iconItem"><i class="fas fa-bars"></i></a></li>
+            <li><a href="" class="iconMenu"><i class="fas fa-bars"></i></a></li>
           </ul>
         </form>
       </div>
@@ -57,7 +58,7 @@
           <div class="offcanvas-header">
             <button class="btn-close float-right fa fa-2x"> &times</button>
           </div>
-          <div class="mapSideWrapper">
+          <div class="mapSideWrapper setAddressForm h-100">
             <div class="row">
               <div class="col-12 py-3 px-5">
                 <h5 class="text-uppercase pb-1">set your ih address</h5>
@@ -90,11 +91,13 @@
                     <input type="text" class="form-control" id="inputAddress2">
                   </div>
                   <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                      value="option1">
                     <label class="form-check-label" for="inlineRadio1">Appartment</label>
                   </div>
                   <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                      value="option2">
                     <label class="form-check-label" for="inlineRadio2">Villa</label>
                   </div>
                   <div class="form-group pt-2">

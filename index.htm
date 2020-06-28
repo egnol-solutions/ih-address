@@ -18,6 +18,8 @@
   <link rel="stylesheet" href="css/line-awesome.min.css">
   <link rel="stylesheet" href="css/animate.css">
   <link rel="stylesheet" href="css/style-min.css">
+  <!-- <link rel="stylesheet" href="css/style-mobile-min.css" media="screen and (max-width:991px)"> -->
+
 </head>
 
 <body>
@@ -33,21 +35,22 @@
     <!---------------------map options ----------------------->
     <nav class="mapOptions">
       <div class="mapMenu">
-        <form class="form">
+        <form class="formSearch">
           <ul class='menuNav'>
-            <li><a href="#" class="iconItem"><i class="fas fa-satellite-dish"></i></a></li>
-            <li><a href="#" class="iconItem"><i class="fas fa-location-arrow"></i></a></li>
+            <li><a href="#" class="iconItem"><img src="images/ih-satellite.png" alt ="satellite view"></a></li>
+            <li><a href="#" class="iconItem"><img src="images/ih-crosshairs.png" alt="track ur location" ></a></li>
             <li class="searchMap">
               <div class='form-group'>
-                <input type="text" class="form-control">
-                <a href="#" class="iconItem"><i class="fas fa-search"></i></a>
+                <input type="text" id="searchInput" class="form-control searchInput">
+                <a href="#" class="iconItem search"><img  src="images/ih-search.png" alt="search"></a>
+                <a href="#" class="iconItem cancel" style="display: none;"><img  src="images/ih-cancel.png" alt="search"></a>
               </div>
             </li>
             <li class="setAddress" data-trigger="#navbar_main">
               <a href="#"><img alt="logo" src="images/ih-logo.png">
                 Set your IH address </a>
             </li>
-            <li><a href="" class="iconItem"><i class="fas fa-bars"></i></a></li>
+            <li><a href="" class="iconMenu"><i class="fas fa-bars"></i></a></li>
           </ul>
         </form>
       </div>
