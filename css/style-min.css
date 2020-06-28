@@ -23,8 +23,38 @@ body {
   font-size: 14px;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: "robotoMed", Arial, Helvetica, sans-serif;
+}
+
+/****************************I picked these to selectors out to make them usable****************************/
+.btn {
+  box-shadow: none !important;
+}
+
+.btn-color {
+  background-color: #ed414e;
+  color: #fff;
+}
+
+.btn-color:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+* {
+  transition: all 0.35s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+.btn-outline-dark, .btn-outline-pink, .btn-pink {
+  margin-bottom: 0.5rem;
+  padding: 3px 20px;
+  border-radius: 10px;
 }
 
 .map,
@@ -42,26 +72,34 @@ body,
   padding: 0;
 }
 
-a.iconItem {
-  color: #fff;
-  font-weight: bold;
-  display: inline-block;
-  background-color: #ed414e;
-  padding: 10px 15px;
-  border-radius: 35%;
-  transform: rotate(-2deg);
-  transition: all 0.35s ease-in-out;
+a.iconItem img {
+  width: 50px;
+  margin-top: -1px;
 }
 
-a.iconItem:hover {
-  background-color: #f55865;
-  /* transform: rotate(-360deg);*/
+a.iconItem img:hover {
+  transform: rotate(0deg) scale(0.9);
+}
+
+a.iconMenu {
+  color: #ed414e;
+  background-color: #fff;
+  border: 1px solid #cecece;
+  font-weight: bold;
+  display: inline-block;
+  padding: 1px 11px;
+  font-size: 1.8rem;
+  border-radius: 40%;
+}
+a.iconMenu:hover {
+  box-shadow: 0px 1px 3px 0px #77777788;
 }
 
 .mapOptions {
   width: 100%;
   display: block;
 }
+
 .mapOptions .mapMenu {
   position: absolute;
   top: 30px;
@@ -75,19 +113,25 @@ a.iconItem:hover {
   max-height: 100%;
   height: 100%;
   overflow-y: auto;
+  display: flex;
+  flex-direction: column;
 }
+
 .mapSideMenu::-webkit-scrollbar {
   width: 8px;
   visibility: hidden;
 }
+
 .mapSideMenu::-webkit-scrollbar-button {
   background: #ed414e;
   display: none;
 }
+
 .mapSideMenu::-webkit-scrollbar-track {
   background: #f1f1f1;
   border-radius: 10px;
 }
+
 .mapSideMenu::-webkit-scrollbar-thumb {
   background: #aaa;
   border-radius: 20px;
@@ -101,14 +145,14 @@ a.iconItem:hover {
   margin-bottom: 5px;
   padding: 10px;
 }
-.mapSideMenu .mapSideWrapper hr {
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-}
 
 ul.menuNav {
   list-style-type: none;
-  text-align: center;
+  text-align: right;
+  margin-right: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 ul.menuNav li {
@@ -124,12 +168,13 @@ ul.menuNav .searchMap .form-group {
   display: flex;
   justify-content: center;
   position: relative;
+  margin-bottom: 0;
 }
 
 ul.menuNav .searchMap .form-group input {
-    border-radius: 20px;
-    height: 40px;
-    box-shadow: 0px 1px 2px 0px #ced4da;
+  border-radius: 20px;
+  height: 48px;
+  box-shadow: 0px 1px 2px 0px #ced4da;
 }
 
 .menuNav .searchMap .form-group a {
@@ -141,7 +186,7 @@ ul.menuNav .searchMap .form-group input {
 .menuNav .setAddress a {
   color: #ed414e;
   background-color: #fff;
-  padding: 10px 30px 12px 15px;
+  padding: 15px 30px 15px 15px;
   border-radius: 20px;
   font-weight: 300;
   border: 1px solid #ced4da;
@@ -165,6 +210,7 @@ body.offcanvas-active {
   bordeR: none;
   z-index: -1;
 }
+
 .offcanvas-header button {
   color: #555;
   border: 1px solid #bbb;
@@ -194,10 +240,14 @@ body.offcanvas-active {
   width: 24%;
   transition: visibility 0.35s ease-in-out, transform 0.35s ease-in-out;
 }
-
 .mobile-offcanvas.showCanvas {
   visibility: visible;
   transform: translateX(0);
+}
+@media screen and (max-width: 1399px) {
+  .mobile-offcanvas {
+    width: 30%;
+  }
 }
 
 /**********************************PAGE-2**********************************/
@@ -210,6 +260,7 @@ body.offcanvas-active {
   justify-content: normal;
   margin-bottom: 5px;
 }
+
 .buildingSlider .carousel-indicators img {
   box-sizing: content-box;
   -ms-flex: 0 1 auto;
@@ -225,17 +276,34 @@ body.offcanvas-active {
   background-clip: padding-box;
   border-top: 10px solid transparent;
   border-bottom: 10px solid transparent;
-  transition: opacity 0.6s ease;
 }
-.buildingSlider .carousel-indicators img:active, .buildingSlider .carousel-indicators img.active {
+
+.buildingSlider .carousel-indicators img:active,
+.buildingSlider .carousel-indicators img.active {
   border-color: #ed414e !important;
 }
+
+.buildingSlider .carousel-item {
+  height: 200px;
+}
+@media screen and (max-width: 1199px) {
+  .buildingSlider .carousel-item {
+    height: 160px;
+  }
+}
+
 .buildingSocial {
-  padding: 5px 20px !important;
+  padding: 10px 20px !important;
 }
+
+.bg-opacity {
+  opacity: 0.2;
+}
+
 .buildingSocial .ihNumber {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
+
 .buildingSocial .ihNumber p {
   font-size: 1.8rem;
   font-weight: bold;
@@ -243,85 +311,178 @@ body.offcanvas-active {
   line-height: 0.8em;
   margin-top: 10px;
 }
+
 @media screen and (max-width: 1200px) {
   .buildingSocial .ihNumber p {
     font-size: 24px;
   }
 }
 .buildingSocial .ihNumber span {
-  display: inline-block;
-  opacity: 0.6;
+  vertical-align: top;
+  font-weight: 300;
   font-size: 0.8rem;
 }
+.buildingSocial .ihNumber span img {
+  width: 15px;
+}
+
 .buildingSocial .shareOptions ul {
   list-style-type: none;
   padding-left: 0;
   text-align: center;
   margin-bottom: 0;
 }
+
 .buildingSocial .shareOptions ul a {
   text-decoration: none;
 }
+
 .buildingSocial .shareOptions ul a li {
   display: inline-block;
   padding-left: 10px;
   padding-right: 10px;
-  margin: 5px auto;
+  transition: all 0.35s ease-in-out;
 }
-.buildingSocial .shareOptions ul a li i, .buildingSocial .shareOptions ul a li small {
+.buildingSocial .shareOptions ul a li:hover i, .buildingSocial .shareOptions ul a li:hover img {
+  transform: rotateY(180deg);
+}
+
+.buildingSocial .shareOptions ul a li i,
+.buildingSocial .shareOptions ul a li small {
   color: #ed414e;
 }
+
 .buildingSocial .shareOptions ul a li i {
-  font-size: 1.3em;
+  font-size: 1.5em;
 }
+
 .buildingSocial .shareOptions ul a li small {
   display: block;
   font-weight: bold;
   text-transform: uppercase;
   font-family: "robotoBold", Arial, Helvetica, sans-serif;
-  font-size: 0.5rem;
+  font-size: 0.6rem;
 }
 
 .buildingAddress {
   padding: 15px 15px 10px !important;
+  flex-grow: 2;
 }
+
 .buildingAddress h5 {
   color: #ed414e;
   text-transform: uppercase;
   font-size: 16px;
   margin-bottom: 5px;
 }
+
 .buildingAddress p {
   font-family: "robotoLight", Arial, Helvetica, sans-serif;
   letter-spacing: 1px;
 }
-.buildingAddress .checkAddress button {
-  color: #555;
-  border: 1px solid #bababa;
-  margin-bottom: 0.5rem;
-  padding: 3px 20px;
+
+.buildingAddress .checkAddress span {
+  color: #a6a6a6;
   border-radius: 10px;
+  border: 1px solid #bababa;
+  font-size: 14px;
+  font-family: "robotoLight";
 }
-.buildingAddress .checkAddress button:hover {
-  background-color: #ed414e;
-  color: #fff;
+.buildingAddress .checkAddress span a, .buildingAddress .checkAddress span a i {
+  color: #8d8d8d;
+  font-weight: bold;
+  font-size: 13px;
+}
+.buildingAddress .checkAddress span a {
+  font-size: 13px;
+  margin: auto 2px;
+}
+
+.buildingAddress .checkAddress .btn-outline-pink {
+  color: #ed414e;
   border: 1px solid #ed414e;
+}
+.buildingAddress .checkAddress .btn-outline-pink:hover {
+  color: #fff;
+  background-color: #333;
+  border: 1px solid #333;
+}
+
+.buildingAddress .checkAddress .btn-pink {
+  background-color: #ed414e;
+  border: 1px solid #ed414e;
+}
+.buildingAddress .checkAddress .btn-pink:hover {
+  background-color: #333;
+  border: 1px solid #333;
+}
+
+.checkAddress .btn-pink, .checkAddress .btn-outline-pink {
+  border-radius: 3rem;
+}
+
+.buildingAddress .checkAddress button.btn-color {
+  color: #fff;
 }
 
 /************************form*************************/
+.setAddressForm form {
+  font-size: 0.8rem;
+  color: #cfcfcf;
+  font-weight: 200;
+  font-family: "roboto", Arial, Helvetica, sans-serif;
+}
+.setAddressForm form .form-group {
+  margin-bottom: 0.6rem;
+}
+.setAddressForm form .form-group input::placeholder {
+  font-size: 0.8rem;
+}
+.setAddressForm form .form-group .form-control {
+  height: calc(.75em + .75rem + 2px);
+  padding: 0.175rem;
+}
+.setAddressForm form .form-group .custom-select {
+  height: calc(.75em + .75rem + 2px);
+  font-size: 0.7rem;
+  padding: 0.175rem;
+}
+.setAddressForm form .btn {
+  border-radius: 3rem;
+  width: 125px;
+  font-size: 0.7rem;
+  padding: 0.175rem 0.75rem;
+}
 
-form{font-size:.8rem;color: #cfcfcf; font-weight: 200; font-family: "roboto", Arial, Helvetica, sans-serif}
-.custom-select{height: calc(.75em + .75rem + 2px);font-size:.7rem;padding:.175rem}
-.form-group{margin-bottom:.6rem;}
-.form-control{height: calc(.75em + .75rem + 2px);padding: .175rem;}
-form input::placeholder{font-size:.8rem;}
-.btn{border-radius:3rem;width:125px;font-size:.7rem;padding: .175rem .75rem;}
-.btn-color{background-color: #ed414e;color:#fff;}
-.btn-color:hover{background-color: #333;color:#fff;}
-@media all and (max-width:992px) {
-
-    .offcanvas-header {
-        display: block;
-    }
+/**********************************PAGE-5**********************************/
+.getPhotosCont {
+  width: 100%;
+  height: 100%;
+  padding: 30px;
+  border-radius: 5px;
+  background: #f5f5f5 url(../images/mobile-hand.png) no-repeat left bottom;
+  border: 1px solid #ccc;
+}
+.getPhotosCont .howToWrapper {
+  margin-left: 60px;
+}
+.getPhotosCont .howToWrapper h5, .getPhotosCont .howToWrapper h2 {
+  margin-bottom: 0;
+  font-family: "robotoBlack", impact;
+}
+.getPhotosCont .howToWrapper h5 {
+  line-height: 1.3rem;
+}
+.getPhotosCont .howToWrapper h2 {
+  line-height: 2.2rem;
+}
+.getPhotosCont .howToWrapper .fileButton {
+  text-align: right;
+}
+.getPhotosCont .howToWrapper .fileButton button {
+  border-radius: 3rem;
+  font-size: 13px;
+  margin-left: 5px;
+}
 
 /*# sourceMappingURL=style-min.css.map */
