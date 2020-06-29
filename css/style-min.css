@@ -380,7 +380,10 @@ body.offcanvas-active {
   font-family: "robotoLight", Arial, Helvetica, sans-serif;
   letter-spacing: 1px;
 }
-
+.buildingAddress .checkAddress{
+  display: flex;
+  justify-content: space-around;
+}
 .buildingAddress .checkAddress span {
   color: #a6a6a6;
   border-radius: 10px;
@@ -419,6 +422,8 @@ body.offcanvas-active {
 
 .checkAddress .btn-pink, .checkAddress .btn-outline-pink {
   border-radius: 3rem;
+  padding: 1px 0;
+    width: 80px;
 }
 
 .buildingAddress .checkAddress button.btn-color {
