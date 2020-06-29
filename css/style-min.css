@@ -427,31 +427,38 @@ body.offcanvas-active {
 
 /************************form*************************/
 .setAddressForm form {
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   color: #cfcfcf;
   font-weight: 200;
   font-family: "roboto", Arial, Helvetica, sans-serif;
 }
 .setAddressForm form .form-group {
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.4rem;
 }
 .setAddressForm form .form-group input::placeholder {
-  font-size: 0.8rem;
+  font-size: 0.7rem;
 }
 .setAddressForm form .form-group .form-control {
-  height: calc(.75em + .75rem + 2px);
-  padding: 0.175rem;
+  height: calc(.75em + .75rem + 1px);
+  padding: 0.170rem;
 }
 .setAddressForm form .form-group .custom-select {
-  height: calc(.75em + .75rem + 2px);
+  height: calc(.75em + .75rem + 4px);
   font-size: 0.7rem;
-  padding: 0.175rem;
+  padding: 0.170rem;
 }
 .setAddressForm form .btn {
   border-radius: 3rem;
   width: 125px;
   font-size: 0.7rem;
   padding: 0.175rem 0.75rem;
+}
+.custom-control-input:checked~.custom-control-label::before{
+  background-color: #ed414e;
+  border-color: #ed414e;
+}
+.custom-control-label{
+  line-height: 2;
 }
 
 /**********************************PAGE-5**********************************/
