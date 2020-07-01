@@ -246,7 +246,7 @@ ul.menuNav .searchMap .form-group input {
   border: 1px solid #cecece;
   font-weight: bold;
   display: inline-block;
-  padding: 1px 5px;
+  padding: 2px;
   font-size: 1.8rem;
   border-radius: 40%;
 }
@@ -309,7 +309,7 @@ body.offcanvas-active {
   height: 40px;
   line-height: 30px;
   outline: none !important;
-  font-size: 2.3rem;
+  font-size: 2rem;
   padding: 0;
 }
 
@@ -343,7 +343,7 @@ body.offcanvas-active {
     width: 25%;
   }
 }
-/**********************************PAGE-2**********************************/
+/**********************************PAGE2 / page8  / page9**********************************/
 .buildingSlider .carousel-indicators {
   position: relative;
   margin-left: 0%;
@@ -476,7 +476,11 @@ body.offcanvas-active {
   letter-spacing: 1px;
 }
 
-.buildingAddress .checkAddress {
+.saveAddress textarea {
+  resize: none;
+}
+
+.buildingAddress .checkAddress, .saveAddress .saveButtons, .addressNotSaved .createAddress {
   display: flex;
   justify-content: space-around;
 }
@@ -501,12 +505,16 @@ body.offcanvas-active {
   margin: auto 2px;
 }
 
-.buildingAddress .checkAddress .btn-outline-pink {
+.buildingAddress .checkAddress .btn-outline-pink,
+.saveAddress .saveButtons .btn-outline-pink,
+.addressNotSaved .createAddress .btn-outline-pink {
   color: #ed414e;
   border: 1px solid #ed414e;
 }
 
-.buildingAddress .checkAddress .btn-outline-pink:hover {
+.buildingAddress .checkAddress .btn-outline-pink:hover,
+.saveAddress .saveButtons .btn-outline-pink:hover,
+.addressNotSaved .createAddress .btn-outline-pink:hover {
   color: #fff;
   background-color: #333;
   border: 1px solid #333;
@@ -522,8 +530,9 @@ body.offcanvas-active {
   border: 1px solid #333;
 }
 
-.checkAddress .btn-pink,
-.checkAddress .btn-outline-pink {
+.checkAddress .btn-pink, .checkAddress .btn-outline-pink,
+.saveButtons .btn-pink, .saveButtons .btn-outline-pink,
+.createAddress .btn-pink, .createAddress .btn-outline-pink {
   border-radius: 3rem;
   padding: 1px 0;
   width: 80px;
@@ -531,6 +540,14 @@ body.offcanvas-active {
 
 .buildingAddress .checkAddress button.btn-color {
   color: #fff;
+}
+
+.addressNotSaved img {
+  max-width: 20%;
+}
+.addressNotSaved p {
+  font-size: 0.8rem;
+  margin: 10px auto 40px;
 }
 
 /************************form*************************/
