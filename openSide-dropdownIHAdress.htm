@@ -45,10 +45,59 @@
                 <a href="#" class="iconItem cancel" style="display: none;"><img  src="images/ih-cancel.png" alt="search"></a>
               </div>
             </li>
-            <li class="setAddress" data-trigger="#navbar_main">
-              <a href="#"><img alt="logo" src="images/ih-logo.png">
-                Set your IH address </a>
+            <li class="setAddress" id="accordion">
+              <span href="#" id="heading" data-toggle="collapse" data-target="#collapsing" aria-expanded="true" aria-controls="collapsing" >
+                <img alt="logo" src="images/ih-logo.png">
+                971.34.344.7777 
+              
+                <div id="collapsing" class="collapse" aria-labelledby="heading" data-parent="#accordion">
+                  <div class="card-body">
+                      <ul class="ihOptions">
+                        <li><button class="btn btn-color">Copy No.</button><button class="btn btn-color">Copy Link</button></li>
+                        <li><a href="#">Edit your IH</a></li>
+                        <li><a href="#">Delete your IH</a></li>
+                        <li><a href="#">Saved address</a></li>
+                        <li><a href="#">Sign out</a></li>
+                      </ul>
+                  </div>
+                </div>
+              </span>
+
+                
             </li>
+
+
+
+<!-- 
+
+            <div id="accordion">
+              <div class="card">
+                <div class="card-header" id="headingOne">
+                  <h5 class="mb-0">
+                    <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      Collapsible Group Item #1
+                    </button>
+                  </h5>
+                </div>
+            
+                <div id="collapseOne" class="collapse " aria-labelledby="headingOne" data-parent="#accordion">
+                  <div class="card-body">
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                  </div>
+                </div>
+              </div> -->
+
+
+
+
+
+
+
+
+
+
+
+
             <li> 
               <button class="navbar-toggler navbar-toggler-right bg-color" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>

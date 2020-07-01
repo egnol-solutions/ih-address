@@ -72,10 +72,10 @@ $(".buttonFile").click(function(){
       }
     readURL(this);
     $(this).prev().addClass("changed");
-
     let fileVal =$(this).val();
     fileVal=fileVal.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1];
       $(this).next(".fileDesc").text(fileVal);
+     
 });
 
 });
@@ -87,4 +87,13 @@ $(".hintPhotos button").click(function(){
   $(this).parents(".hintPhotos").animate({left: '-100%'}).fadeOut('fast',function(){
     $(".uploadPhotos").css({transform: 'translateX(0%)'});
   });
+});
+
+
+
+
+/********************openSide-dropdownIHAdress*********************** */
+
+$(".map").click(function(){
+  $(".mobile-offcanvas").addClass("showCanvas");
 });
