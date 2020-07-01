@@ -46,24 +46,9 @@
                     alt="search"></a>
               </div>
             </li>
-            <li class="setAddress" id="accordion">
-              <span href="#" id="heading" data-toggle="collapse" data-target="#collapsing" aria-expanded="true"
-                aria-controls="collapsing">
-                <img alt="logo" src="images/ih-logo.png">
-                971.34.344.7777
-                <div id="collapsing" class="collapse" aria-labelledby="heading" data-parent="#accordion">
-                  <div class="card-body">
-                    <ul class="ihOptions">
-                      <li><button class="btn btn-color">Copy No.</button><button class="btn btn-color">Copy
-                          Link</button></li>
-                      <li><a href="#">Edit your IH</a></li>
-                      <li><a href="#">Delete your IH</a></li>
-                      <li><a href="#">Saved address</a></li>
-                      <li><a href="#">Sign out</a></li>
-                    </ul>
-                  </div>
-                </div>
-              </span>
+            <li class="setAddress" data-trigger="#navbar_main">
+              <a href="#"><img alt="logo" src="images/ih-logo.png">
+                Set your IH address </a>
             </li>
             <li>
               <button class="navbar-toggler navbar-toggler-right bg-color" type="button" data-toggle="collapse"
@@ -95,6 +80,7 @@
           <button class="float-right"><i class="las la-ellipsis-v"></i></button>
         </div>
         <div class="mapSideMenu">
+                <!-----------------the image-slider------------------->
           <div class="mapSideWrapper buildingSlider">
             <div id="carouselExampleIndicators" class="carousel slide" data data-pause="true">
               <div class="carousel-inner">
@@ -124,50 +110,36 @@
               <div class="clearfix"></div>
             </div>
           </div>
+                <!------------------sharing options------------------->
           <div class="mapSideWrapper buildingSocial">
             <div class="ihNumber">
               <p>971.34.344.7777 <span class=" ml-1"><img src="images/ih-check.png" alt='Accurate address'> (95%)</span>
               </p>
             </div>
             <hr class="row">
-            <div class="shareOptions row d-flex justify-content-center">
-              <ul>
-                <a href="#">
-                  <li><i class="fas fa-clone"></i><small>copy link</small></li>
-                </a>
-                <a href="#">
-                  <li><img src='images/ih-logo.png' alt="ih" width="45"><small>copy no.</small></li>
-                </a>
-                <a href="#">
-                  <li><i class="fas fa-bookmark"></i><small>save</small></li>
-                </a>
-                <a href="#">
-                  <li><i class="fas fa-share-alt"></i><small>share</small></li>
-                </a>
-                <a href="#">
-                  <li><i class="fas fa-directions"></i><small>direction</small></li>
-                </a>
-              </ul>
+            <div>
+              <form class="saveAddress">
+                  <div class="form-group">
+                    <textarea class="form-control" placeholder="Address name:"></textarea>
+                  </div>
+                  <div class="form-group">
+                    <textarea class="form-control" placeholder="Note:"></textarea>
+                  </div>
+                  <div class="saveButtons text-center mt-4">
+                      <div class="btn btn-outline-pink back">
+                        <small><i class="fas fa-chevron-left"></i> Back</small>
+                      </div>
+                      <div class="btn  btn-color btn-pink save">
+                        <small>
+                          <i class="fas fa-bookmark"></i> Save
+                        </small>
+                      </div>
+                  </div>
+              </form>
             </div>
+
           </div>
-          <div class="mapSideWrapper buildingAddress">
-            <div class="address">
-              <h5>Address</h5>
-              <p>Apartment: 210, El-Ewis bldg, Ammar Bin Yasser road, Elmowahiat 3 ,Ajman.</p>
-            </div>
-            <hr class="row">
-            <div class="landmark">
-              <h5>landmark</h5>
-              <p>Opposite: Ajman Academy. Opposite: Ajman Academy.Opposite: Ajman Academy.</p>
-            </div>
-                  
-          <div class="checkAddress text-center mt-4">
-            <button class="btn  btn-outline-dark btn-outline-pink"><small><i class="fas fa-chevron-left"></i>
-                Back</small></button>
-            <button class="btn btn-color btn-pink"><small> Create</small><img src="images/create-icon.png"
-                alt="ih-logo"></button>
-          </div>
-          </div>
+       
         </div>
       </div>
     </nav>
