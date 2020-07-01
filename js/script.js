@@ -15,7 +15,7 @@ $(function () {
     }
   });
 
-  $(".offcanvas-header, .setAddress").click(function () {
+  $(".offcanvas-header, .setAddress:not('#accordion')").click(function () {
     if ($('.mobile-offcanvas').hasClass("showCanvas")) {
       $('.mobile-offcanvas').removeClass("showCanvas");
       $('.offcanvas-header button').html('<i class="las la-ellipsis-v">');
@@ -25,8 +25,11 @@ $(function () {
     }
   });
 
-  // <i class="fas fa-ellipsis-v"></i>
-
+/**********************************the dropdown menu close****************************** */
+/*collapse close*/
+$(document).on('click',function(){
+  $('.collapse').collapse('hide');
+})
   /*****************************toggle close/search buttons******************************* */
 
   let searchInput = $(".searchInput");
