@@ -24,33 +24,27 @@ $(function(){
   }
   });
   
-  $(".buttonFile").click(function(){
-    $(".hiddenFile").click();
-  });
-  $(".hiddenFile").change(function(){
-    var fileVal=$(".hiddenFile").val();
-    fileVal=fileVal.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1];
-      $(".fileDesc").text(fileVal);
-  });
 
+
+
+  /*****************************toggle close/search buttons******************************* */
 
    let searchInput=$(".searchInput");
    let cancelIcon=$(".searchMap .cancel");
    let searchIcon=$(".searchMap .search");
-  //  let cancelIcon="<img src='images/ih-cancel.png' alt='cancel'>";
-  //  let searchIcon="<img src='images/ih-search.png' alt='search' for='searchInput'>";
+
   $(searchInput).keyup(function(){
     if ((searchInput.val()).length>0){
-      $(cancelIcon).show();
-      $(searchIcon).hide();
-      $(".searchMap img").click(function(){
-        searchInput.val("");
-        $(cancelIcon).hide();
-      $(searchIcon).show();
+          $(cancelIcon).show();
+          $(searchIcon).hide();
+          $(".searchMap img").click(function(){
+            searchInput.val("");
+            $(cancelIcon).hide();
+            $(searchIcon).show();
       });
      }else{
-      $(cancelIcon).hide();
-      $(searchIcon).show();
+          $(cancelIcon).hide();
+          $(searchIcon).show();
     
      }
   });
@@ -63,4 +57,34 @@ $(document).on('click',function(){
 })
 
 
+/*************************preview photos before upload***********************/
+$(".buttonFile").click(function(){
+  let hidFile=$(this).next(".hiddenFile");
+    hidFile.click().change(function(){
+      function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();          
+            reader.onload = function (e) {
+              hidFile.prev().children('.displayImg').attr('src', e.target.result);
+            } 
+            reader.readAsDataURL(input.files[0]);
+        }
+      }
+    readURL(this);
+    $(this).prev().addClass("changed");
 
+    let fileVal =$(this).val();
+    fileVal=fileVal.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1];
+      $(this).next(".fileDesc").text(fileVal);
+});
+
+});
+
+
+/************************************slide from photos hint to photos uplaod***********************************/
+
+$(".hintPhotos button").click(function(){
+  $(this).parents(".hintPhotos").animate({left: '-100%'}).fadeOut('fast',function(){
+    $(".uploadPhotos").css({transform: 'translateX(0%)'});
+  });
+});
