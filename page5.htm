@@ -59,23 +59,61 @@
         </div>
         <div class="mapSideMenu">
           <div class="mapSideWrapper buildingSlider">
-              <div class="getPhotosCont">
+          <div class="photoUploadingCont">
+            <div class="UploadingWrapper">
+              <div class="getPhotosCont hand-bg hintPhotos">
                 <div class="howToWrapper">
                   <h5>
                       How to get photos
                   </h5>
                   <h2>of your home?</h2>
                   <p>You have to take good photos of your home and mark one arrow to your home</p>
-
-                  <!--------------------open file--------------------->
+  
                   <div class="fileButton">
-                    <span class="fileDesc"></span>
-
-                    <input class="hiddenFile" id='photoUpload' type="file" hidden><!-----the real action input----->
-                    <button class="buttonFile btn-color btn">upload photo..</button>
+                    <button class=" btn-color btn">next..</button>
                   </div>
                 </div>
               </div>
+              <div class="getPhotosCont uploadPhotos">
+                <div class='photoSource'>
+                  <ul>
+                    <li> <i class="las la-camera"></i> Camera</li>
+                    <li> <i class="las la-paperclip"></i> Upload</li>
+                  </ul>
+                </div>
+                <div class="photoBoxes">
+                 <form>
+                  <ul>
+                    <li>
+                      <button class="buttonFile" ><img class='displayImg' src="" alt=""></button>
+                    <input type="file" class="hiddenFile" hidden>
+                    <h6 class="fileDesc"> Photo 1</h6>
+                    </li>
+                    <li>
+                      <button class="buttonFile"><img class='displayImg' src="" alt=""></button>
+                    <input type="file"  class="hiddenFile" hidden>
+                    <h6 class="fileDesc">  Photo 1</h6>
+                    </li>
+                    <li>
+                      <button class="buttonFile"><img class='displayImg' src="" alt=""></button>
+                      <input type="file" class="hiddenFile" hidden>
+                      <h6 class="fileDesc"> Photo 1</h6>
+                    </li>
+                    <li>
+                      <button class="buttonFile" ><img class='displayImg' src="" alt=""></button>
+                      <input type="file" class="hiddenFile" hidden>
+                      <h6 class="fileDesc"> Photo 1</h6>
+                    </li>
+                  </ul>
+                 </form>
+                </div>
+                <div class="text-right">
+                  <button class="btn-color btn">Upload</button>
+                </div>
+              </div>
+
+            </div>
+          </div>
           </div>
           <div class="mapSideWrapper buildingSocial">
            <div class="bg-opacity">
