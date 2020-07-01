@@ -61,6 +61,7 @@ h6 {
 .map iframe {
   height: 100%;
   width: 100%;
+  background-color: #eee;
 }
 
 /* Optional: Makes the sample page fill the window. */
@@ -151,12 +152,9 @@ ul.menuNav {
   list-style-type: none;
   text-align: right;
   margin-right: 150px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
 }
 
-ul.menuNav li {
+ul.menuNav > li {
   display: inline-block;
   margin: 0.2rem 0.5rem;
 }
@@ -184,31 +182,71 @@ ul.menuNav .searchMap .form-group input {
   top: 1px;
 }
 
-.menuNav .setAddress a {
+.menuNav .setAddress > a, .menuNav .setAddress > span {
   color: #ed414e;
   background-color: #fff;
-  padding: 15px 30px 15px 15px;
+  padding: 15px 50px 17px 15px;
   border-radius: 20px;
   font-weight: 300;
   border: 1px solid #ced4da;
   box-shadow: 0px 1px 2px 0px #ced4da;
 }
 
-.menuNav .setAddress a img {
+.menuNav .setAddress a img, .menuNav .setAddress span img {
   width: 15%;
 }
 
+.setAddress {
+  position: relative;
+  text-align: left;
+  cursor: pointer;
+}
+.setAddress #collapsing {
+  position: absolute;
+  top: 20px;
+  left: 0;
+}
+.setAddress #collapsing .card-body {
+  padding: 0;
+  background: #fff;
+  border-radius: 0 0 30px 30px;
+  border: 1px solid #ced4da;
+  border-top: 0;
+}
+.setAddress #collapsing .card-body ul.ihOptions {
+  padding: 5px 0px 10px;
+  list-style-type: none;
+}
+.setAddress #collapsing .card-body ul.ihOptions > li {
+  padding: 5px 25px;
+  border-bottom: 1px solid #ced4da;
+}
+.setAddress #collapsing .card-body ul.ihOptions > li button {
+  border-radius: 3rem;
+  font-size: 12px;
+  padding: 2px 10px;
+  margin: 5px 5px 10px;
+}
+.setAddress #collapsing .card-body ul.ihOptions > li a {
+  color: #ed414e;
+}
+.setAddress #collapsing .card-body ul.ihOptions > li:last-child {
+  border: none;
+  padding-bottom: 0px;
+}
+
 /*collapse menu*/
-.navbar-toggler{
+.navbar-toggler {
   color: #ed414e;
   background-color: #fff;
   border: 1px solid #cecece;
   font-weight: bold;
   display: inline-block;
-  padding: 1px 11px;
+  padding: 1px 5px;
   font-size: 1.8rem;
   border-radius: 40%;
 }
+
 .navbar-toggler-icon {
   display: inline-block;
   width: 1.5em;
@@ -216,29 +254,34 @@ ul.menuNav .searchMap .form-group input {
   vertical-align: middle;
   padding-top: 10px;
 }
-.nav-link{
-  color:#333;
-  font-size:.8rem;
-  padding:0;
-  border-bottom:1px solid #cecece;
+
+.nav-link {
+  color: #333;
+  font-size: 0.8rem;
+  padding: 0;
+  border-bottom: 1px solid #cecece;
 }
-.nav-link:hover{
-  color:#ed414e;
+
+.nav-link:hover {
+  color: #ed414e;
 }
-.nav-link:active{
-  color:#ed414e;
+
+.nav-link:active {
+  color: #ed414e;
 }
-.nav-link.active{
-  color:#ed414e;
+
+.nav-link.active {
+  color: #ed414e;
 }
-.navbar-nav{
-padding:.5rem;
-position: absolute;
-background-color: #fff;
-top:2px;
-border-radius:5px;
-width:140px;
-box-shadow: 0px 1px 2px 0px #ced4da;
+
+.navbar-nav {
+  padding: 0.5rem;
+  position: absolute;
+  background-color: #fff;
+  top: 2px;
+  border-radius: 5px;
+  width: 140px;
+  box-shadow: 0px 1px 2px 0px #ced4da;
 }
 
 /************************offCanvas - left side bar*************************/
@@ -498,12 +541,12 @@ body.offcanvas-active {
   font-size: 0.7rem;
 }
 
-.setAddressForm form .form-group .form-control,.custom-select {
+.setAddressForm form .form-group .form-control, .custom-select {
   height: calc(.75em + .75rem + 3px);
-  padding: 0.170rem;
+  padding: 0.17rem;
   font-size: 0.7rem;
   line-height: 1.5;
-  font-weight: 400
+  font-weight: 400;
 }
 
 .setAddressForm form .btn {
@@ -522,38 +565,46 @@ body.offcanvas-active {
 .custom-control-label {
   line-height: 2;
 }
-.form-control:focus,.custom-select:focus {
+
+.form-control:focus, .custom-select:focus {
   border-color: #ed414e;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #ed414e;
 }
-.custom-select{
-  background: #fff url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjwhRE9DVFlQRSBzdmcgIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICAnaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkJz48c3ZnIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDUwIDUwIiBoZWlnaHQ9IjUwcHgiIGlkPSJMYXllcl8xIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCA1MCA1MCIgd2lkdGg9IjUwcHgiIHhtbDpzcGFjZT0icHJlc2VydmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPjxyZWN0IGZpbGw9Im5vbmUiIGhlaWdodD0iNTAiIHdpZHRoPSI1MCIvPjxwb2x5Z29uIHBvaW50cz0iNDcuMjUsMTUgNDUuMTY0LDEyLjkxNCAyNSwzMy4wNzggNC44MzYsMTIuOTE0IDIuNzUsMTUgMjUsMzcuMjUgIi8+PC9zdmc+) no-repeat right .45rem center/8px 10px;
+
+.custom-select {
+  background: #fff url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjwhRE9DVFlQRSBzdmcgIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICAnaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkJz48c3ZnIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDUwIDUwIiBoZWlnaHQ9IjUwcHgiIGlkPSJMYXllcl8xIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCA1MCA1MCIgd2lkdGg9IjUwcHgiIHhtbDpzcGFjZT0icHJlc2VydmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPjxyZWN0IGZpbGw9Im5vbmUiIGhlaWdodD0iNTAiIHdpZHRoPSI1MCIvPjxwb2x5Z29uIHBvaW50cz0iNDcuMjUsMTUgNDUuMTY0LDEyLjkxNCAyNSwzMy4wNzggNC44MzYsMTIuOTE0IDIuNzUsMTUgMjUsMzcuMjUgIi8+PC9zdmc+) no-repeat right 0.45rem center/8px 10px;
 }
+
 /**********************************PAGE-4**********************************/
-.text-logo{
-font-size: .7rem;
-color:#333
+.text-logo {
+  font-size: 0.7rem;
+  color: #333;
 }
-.social-media{
-padding:5px 10px;
-margin-bottom:15px;
-background-color: #cecece6e;
-text-transform: uppercase;
-font-size:.8rem
+
+.social-media {
+  padding: 5px 10px;
+  margin-bottom: 15px;
+  background-color: #cecece6e;
+  text-transform: uppercase;
+  font-size: 0.8rem;
 }
-.social-media a{
-color:rgb(119, 118, 118);
-text-decoration:none;
+
+.social-media a {
+  color: #777676;
+  text-decoration: none;
 }
-.social-media .fab{
-  color:#ed414e;
-  font-size:1.2rem;
+
+.social-media .fab {
+  color: #ed414e;
+  font-size: 1.2rem;
   width: 25px;
 }
+
 /**********************************PAGE-5**********************************/
 .photoUploadingCont {
   overflow: hidden;
 }
+
 .photoUploadingCont .UploadingWrapper {
   width: 200%;
   position: relative;
@@ -613,14 +664,17 @@ text-decoration:none;
   overflow: hidden;
   display: inline-block;
 }
+
 .getPhotosCont.uploadPhotos {
   background: #f5f5f5;
 }
+
 .getPhotosCont.uploadPhotos .photoSource ul {
   list-style-type: none;
   width: 50%;
   padding: 0;
 }
+
 .getPhotosCont.uploadPhotos .photoSource ul li {
   background-color: #fff;
   color: #4d4d4d;
@@ -628,6 +682,7 @@ text-decoration:none;
   padding: 3px 5px;
   box-shadow: 1px 1px 2px 1px #e5e5e5;
 }
+
 .getPhotosCont.uploadPhotos .photoBoxes ul {
   list-style-type: none;
   padding: 0;
@@ -635,6 +690,7 @@ text-decoration:none;
   display: -webkit-flex;
   display: flex;
 }
+
 .getPhotosCont.uploadPhotos .photoBoxes ul li {
   display: inline-block;
   width: 16%;
@@ -642,6 +698,7 @@ text-decoration:none;
   margin-right: 4%;
   overflow: hidden;
 }
+
 .getPhotosCont.uploadPhotos .photoBoxes ul li button {
   text-align: left;
   border: 1px solid #ed414e;
@@ -655,6 +712,7 @@ text-decoration:none;
   overflow: hidden;
   position: relative;
 }
+
 .getPhotosCont.uploadPhotos .photoBoxes ul li button:after {
   content: " + ";
   width: 100%;
@@ -669,22 +727,27 @@ text-decoration:none;
   top: 0;
   left: 0;
 }
+
 .getPhotosCont.uploadPhotos .photoBoxes ul li button.changed:after {
   display: none;
 }
+
 .getPhotosCont.uploadPhotos .photoBoxes ul li button:hover::after {
   background-color: #f5f5f5;
   border-radius: 0;
 }
+
 .getPhotosCont.uploadPhotos .photoBoxes ul li button img {
   width: 100%;
-  position: absolute;
-  top: 0;
+  max-height: 100%;
 }
+
 .getPhotosCont.uploadPhotos .photoBoxes ul li h6 {
   margin-top: 5px;
   font-size: 0.7rem;
   overflow-wrap: break-word;
 }
+
+/*# sourceMappingURL=style-min.css.map */
 
 /*# sourceMappingURL=style-min.css.map */
