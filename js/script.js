@@ -51,6 +51,11 @@ $(function(){
 
 });
 
+/*collapse close*/
+$(document).on('click',function(){
+  $('.collapse').collapse('hide');
+})
+
 
 /*************************preview photos before upload***********************/
 $(".buttonFile").click(function(){
